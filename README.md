@@ -1,4 +1,4 @@
-# Adevinta Search Engine
+# Text Search Engine
 
 Reads all the text files in the given directory, building an in memory representation of the
 files and their contents, and then give a command prompt at which interactive searches can be
@@ -16,11 +16,11 @@ The search should take the words given on the command prompt and return a list o
 ## Install and set up
 1. Download and extract the project.
 2. From the main folder run the command `sbt clean package`.
-3. Inside the folder `/target/scala-2.12` a jar file would have been created by the name `adevinta-search-engine_2.12-1.0.0.jar`.
+3. Inside the folder `/target/scala-2.12` a jar file would have been created by the name `text-search-engine_2.12-1.0.0.jar`.
 4. To run the application you must use the `spark-submit` command as it follows:
 `spark-submit \
-   --class com.adevinta.searchengine.SearchApp \
-   {PATH_TO_JAR}/adevinta-search-engine_2.12-1.0.0.jar \
+   --class com.text.searchengine.SearchApp \
+   {PATH_TO_JAR}/text-search-engine_2.12-1.0.0.jar \
    {PATH_TO_FILES}`
 
 ## Things to consider
@@ -32,10 +32,10 @@ The search should take the words given on the command prompt and return a list o
 ## Example
 ```
 $ spark-submit \
---class com.adevinta.searchengine.SearchApp \
-./adevinta-search-engine_2.12-1.0.0.jar \
+--class com.text.searchengine.SearchApp \
+./text-search-engine_2.12-1.0.0.jar \
 ./files
-12 files read in directory: /adevinta/files
+12 files read in directory: /documents/files
 search> cats to dogs not
 test2.txt : 75%
 test1.txt : 50%

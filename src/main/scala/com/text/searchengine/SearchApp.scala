@@ -16,7 +16,7 @@ object SearchApp {
 
   def runJob(path: String): Unit = {
 
-    implicit val sparkContext = createSparkContext("adevinta-search-engine")
+    implicit val sparkContext = createSparkContext("text-search-engine")
     Logger.getLogger("org").setLevel(Level.OFF)
 
     val files = getFilesFromDirectory(path)
